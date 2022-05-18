@@ -1,0 +1,53 @@
+/*FOOTER*/
+footer {
+    width: 100%;
+    background-color: rgb(178, 6, 0);
+    color: #000;
+    margin-top: 40px;
+    .group1 {
+        text-align: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 50px 0;
+        .box1 {
+            h2 {
+                font-weight: bold;
+            }
+            p {
+                font-weight: bold;
+            }
+        }
+        .box2 {
+            h2 {
+                font-weight: bold;
+            }
+            .social-net {
+                a {
+                    color: #000;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    transition: all 300ms ease;
+                    &:hover {
+                        color: $color1;
+                    }
+                }
+            }
+        }
+    }
+    .group2 {
+        text-align: center;
+    }
+}
+
+    /* RESPONSIVE FOOTER*/
+@media screen and (min-width: 1024px) {
+    footer {
+        .group1 {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+

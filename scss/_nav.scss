@@ -1,0 +1,177 @@
+/* NAVIGATION */
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../IMG/general/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    nav {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        div {
+            .nav-logo {
+                width: 50px;
+                margin-left: 20px;
+            }
+        }
+        .bar-btn {
+            font-size: $sizestandar;
+            color: $color1;
+            cursor: pointer;
+            margin-right: $sizestandar;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: 1fr;
+            position: fixed;
+            width: 100%;
+            height: 0vh;
+            top: 100px;
+            background-color: rgba(245, 245, 245, .5);
+            text-align: center;
+            transition: all .5s;
+            >li {
+                position: relative;
+                margin: $sizestandar;
+                display: none;
+                line-height: 30px;
+                transition: all .5s;
+                >a {
+                    display: block;
+                    color: $color2;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+            li {
+                a {
+                    text-transform: uppercase;
+                }
+                a.active, &:hover {
+                    color: rgb(188, 3, 3);
+                    transition: .3s;
+                }
+                a.active {
+                    font-weight: bold;
+                    font-size: 22px;
+                }
+                .sub-menu {
+                    position: absolute;
+                    left: $sizestandar;
+                    display: none;
+                    li {
+                        a {
+                            display: block;
+                            margin: 10px;
+                            width: 100%;
+                            color: $color2; 
+                        }
+                    }
+                }
+                &:hover {
+                    .sub-menu {
+                        display: block;
+                    }
+                }
+            }
+        }
+        #check {
+            display: none;
+            &:checked ~ .menu {
+                height: 100vh;
+                li {
+                    display: block;
+                }
+            }
+        }
+    }
+    .banner-text {
+        margin-top: 150px;
+        padding: 0px 30px;
+        text-align: center;
+        h2 {
+            font-weight: 600;
+            color: $color1;
+            margin-bottom: $sizestandar;
+        }
+        h1 {
+            color: rgb(223, 35, 35);
+            font-weight: 700;
+            font-family: "Oleo Script Swash Caps", cursive;
+            margin-bottom: $sizestandar;
+        }
+        div {
+            .button1 {
+                background-color: red;
+                padding: 15px;
+                margin-top: 10px;
+                border-radius: 10px;
+                color: $color1;
+            }
+        }
+    }
+}
+
+    /* RESPONSIVE NAVIGATION */
+
+@media screen and (min-width: 768px) {
+    header {
+        nav {
+            div {
+                .nav-logo {
+                    display: none;
+                }
+            }
+            .bar-btn {
+                display: none;
+            }
+            .menu {
+                display: flex;
+                height: 100px;
+                top: 0  ;
+                transition: none;
+                text-align: right;
+                margin-right: 50px;
+                background-color: rgba(245, 245, 245, 0);
+                >li {
+                    display: inline-block;
+                    align-self: center;
+                    >a {
+                        color: $color1;
+                    }
+                }
+                li {
+                    a.active {
+                        font-size: 35px;
+                    }
+                    .sub-menu {
+                        li {
+                            a {
+                                display: block;
+                                margin: 10px;
+                                width: 100%;
+                                color: $color1;
+                                &:hover {
+                                    color: rgb(188, 3, 3);
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .banner-text {
+            h2 {
+                font-size: 35px;
+            }
+            h1 {
+                font-size: 45px;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+    //MAPS
+$cards: (
+    1: '../IMG/general/anillo.jpg',
+    2: '../IMG/general/pulsera.jpg',
+    3: '../IMG/general/collar.jpg'
+);
+
+@each $number, $img in $cards {
+    .card-#{$number} {
+        background-image: url($img);
+    }
+}
+
