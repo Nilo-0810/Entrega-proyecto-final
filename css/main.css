@@ -136,14 +136,80 @@ header {
   header .banner-text h1 {
     font-size: 45px; } }
 
-.card-1 {
-  background-image: url("../IMG/general/anillo.jpg"); }
+/* INDEX HTML */
+/* CARDS */
+.contenedor {
+  display: inline-block;
+  text-align: center;
+  margin: 80px 30px; }
+  .contenedor section {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 4px solid #b20600;
+    border-radius: 10px; }
+    .contenedor section img {
+      width: 250px;
+      height: 250px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px; }
+    .contenedor section a h3 {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #b20600;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 10px; }
 
-.card-2 {
-  background-image: url("../IMG/general/pulsera.jpg"); }
+/* RESPONSIVE CARDS */
+@media screen and (min-width: 740px) {
+  .contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .contenedor section {
+      margin-right: 30px; } }
 
-.card-3 {
-  background-image: url("../IMG/general/collar.jpg"); }
+/* SECCION BANNER TEXT */
+.section1 {
+  background-color: #140707;
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  position: relative; }
+  .section1 div {
+    position: relative; }
+    .section1 div p {
+      position: absolute;
+      top: 120px;
+      font-weight: 800;
+      font-size: 20px;
+      color: #fff;
+      margin: 0px 20px;
+      text-align: center; }
+    .section1 div div {
+      text-align: center; }
+      .section1 div div .button2 {
+        position: absolute;
+        top: 280px;
+        background: #b20600;
+        padding: 10px 10px;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 10px; }
+
+/* RESPONSIVE BANNER TEXT */
+@media screen and (min-width: 610px) {
+  .section1 div p {
+    font-size: 30px;
+    margin: 0px 35px; }
+  .section1 div div .button2 {
+    font-size: 20px; } }
 
 .nosotros .nosotros-text {
   margin: 30px 10px;
@@ -155,9 +221,11 @@ header {
   margin-left: 30px;
   border-radius: 30px; }
 
+/* NOSOTROS HTML*/
 .nosotros .nosotros-text h2 {
   font-weight: 800; }
 
+/*RESPONSIVE NOSOTROS HTML*/
 @media screen and (min-width: 610px) {
   .nosotros {
     display: flex; }

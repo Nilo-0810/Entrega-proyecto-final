@@ -11,7 +11,7 @@
     border-radius: 30px;
 }
 
-//NOSOTROS HTML 
+    /* NOSOTROS HTML*/
 .nosotros {
     .nosotros-text {
         @extend %space;
@@ -26,7 +26,7 @@
     }
 }
 
-//RESPONSIVE NOSOTROS HTML 
+    /*RESPONSIVE NOSOTROS HTML*/ 
 @media screen and (min-width: 610px) {
     .nosotros {
         display: flex;
