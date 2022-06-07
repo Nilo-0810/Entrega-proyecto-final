@@ -1,11 +1,69 @@
-$color1: #fff; 
-$color2: #000;
-$color3: #b20600;
-$sizestandar: 20px;
-$sizestandar2: 40px;
+//MIXINS DE FLEX
+@mixin flex ( $dis , $just , $align) {
+    display: $dis;
+    justify-content: $just;
+    align-items: $align;
+}
 
+//MIXINS DE GRID
+@mixin grid ( $column , $space ){
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0em;
+
+    @media screen and (min-width: 740px){
+        grid-template-columns: repeat( $column , 1fr );
+        gap: $space;
+    }
+
+    @media screen and (min-width: 1040px){
+        grid-template-columns: repeat( $column , 1fr );
+        gap: $space;
+    }
+}
+
+//MIXINS MEDIDA
+@mixin size ( $width , $height ){
+    width: $width;
+    height: $height;
+}
+
+//MIXINS DE IMAGEN
+@mixin img ( $url , $center , $no-repeat , $size ){
+    background-image: $url;
+    background-position: $center;
+    background-repeat: $no-repeat;
+    background-size: $size;
+}
+
+/* ANILLO HMTL FLEX-PRODUCTOS */
+    /* MIXIN */
+    @mixin flex-anillo($dir, $wrap, $just-cont, $alig-items) {
+        display: flex;
+        flex-flow: $dir $wrap;
+        justify-content: $just-cont;
+        align-items: $alig-items;
+    }
+
+//EXTEND
+%space {
+    margin: 30px 10px;
+    text-align: center;
+}
+
+%size {
+    width: 250px;
+    height: 350px;
+    margin-left: 30px;
+    border-radius: 30px;
+}
+
+// ARRAY
 $palette: (
-    "color1": #fff,
-    "color2": #000,
-    "color3": #b20600
+    "color-w": #fff,
+    "color-b": #000,
+    "color-1": rgb(188, 3, 3), 
+    "color-2": rgb(223, 35, 35), 
+    "color-3": rgba(245, 245, 245, .5)
 )
+

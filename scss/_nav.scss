@@ -1,17 +1,12 @@
 /* NAVIGATION */
 header {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../IMG/general/fondo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include size ( 100% , 100vh);
+    @include img ( url(../IMG/general/fondo.jpg) , center , no-repeat , cover);
+    
     nav {
-        display: flex;
-        width: 100%;
-        height: 100px;
-        justify-content: space-between;
-        align-items: center;
+        @include size ( 100% , 100px);
+        @include flex ( flex , space-between , center);
+
         div {
             .nav-logo {
                 width: 50px;
@@ -19,30 +14,29 @@ header {
             }
         }
         .bar-btn {
-            font-size: $sizestandar;
-            color: $color1;
+            font-size: 20px;
+            color: map-get( $palette , "color-w" );
             cursor: pointer;
-            margin-right: $sizestandar;
+            margin-right: 20px;
         }
         .menu {
+            @include size ( 100% , 0vh );
             display: grid;
             grid-template-columns: 1fr;
             position: fixed;
-            width: 100%;
-            height: 0vh;
             top: 100px;
-            background-color: rgba(245, 245, 245, .5);
+            background-color: map-get( $palette , "color-3" );
             text-align: center;
             transition: all .5s;
             >li {
                 position: relative;
-                margin: $sizestandar;
                 display: none;
+                margin: 20px;
                 line-height: 30px;
                 transition: all .5s;
                 >a {
                     display: block;
-                    color: $color2;
+                    color: map-get( $palette , "color-b" );
                     font-weight: 600;
                     font-size: 18px;
                 }
@@ -52,7 +46,7 @@ header {
                     text-transform: uppercase;
                 }
                 a.active, &:hover {
-                    color: rgb(188, 3, 3);
+                    color: map-get( $palette , "color-1" );
                     transition: .3s;
                 }
                 a.active {
@@ -61,14 +55,14 @@ header {
                 }
                 .sub-menu {
                     position: absolute;
-                    left: $sizestandar;
+                    left: 20px;
                     display: none;
                     li {
                         a {
                             display: block;
                             margin: 10px;
                             width: 100%;
-                            color: $color2; 
+                            color: map-get( $palette , "color-b" );
                         }
                     }
                 }
@@ -95,29 +89,28 @@ header {
         text-align: center;
         h2 {
             font-weight: 600;
-            color: $color1;
-            margin-bottom: $sizestandar;
+            color: map-get( $palette , "color-w" );
+            margin-bottom: 20px;
         }
         h1 {
-            color: rgb(223, 35, 35);
-            font-weight: 700;
-            font-family: "Oleo Script Swash Caps", cursive;
-            margin-bottom: $sizestandar;
+            color: map-get( $palette , "color-2" );
+            font-weight: 800;
+            font-family: "Montserrat", sans-serif;
+            margin-bottom: 20px;
         }
         div {
             .button1 {
-                background-color: red;
+                background-color: map-get( $palette , "color-2" );
                 padding: 15px;
                 margin-top: 10px;
                 border-radius: 10px;
-                color: $color1;
+                color: map-get( $palette , "color-w" );
             }
         }
     }
 }
 
-    /* RESPONSIVE NAVIGATION */
-
+/* RESPONSIVE */
 @media screen and (min-width: 768px) {
     header {
         nav {
@@ -132,7 +125,7 @@ header {
             .menu {
                 display: flex;
                 height: 100px;
-                top: 0  ;
+                top: 0;
                 transition: none;
                 text-align: right;
                 margin-right: 50px;
@@ -141,7 +134,7 @@ header {
                     display: inline-block;
                     align-self: center;
                     >a {
-                        color: $color1;
+                        color: map-get( $palette , "color-w" );
                     }
                 }
                 li {
@@ -154,9 +147,9 @@ header {
                                 display: block;
                                 margin: 10px;
                                 width: 100%;
-                                color: $color1;
+                                color: map-get( $palette , "color-w" );
                                 &:hover {
-                                    color: rgb(188, 3, 3);
+                                    color: map-get( $palette , "color-1" );
                                     font-weight: bold;
                                 }
                             }

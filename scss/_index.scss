@@ -11,7 +11,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        border: 4px solid $color3;
+        border: 4px solid map-get( $palette , "color-2" );
         border-radius: 10px;
         img {
             width: (500px / 2);
@@ -21,10 +21,10 @@
         }
         a {
             h3 {
-                margin-top: $sizestandar;
+                margin-top: 20px;
                 padding: 10px;
-                background-color: $color3;
-                color: $color1;
+                background-color: map-get( $palette , "color-2" );
+                color: map-get( $palette , "color-w" );
                 font-weight: bold;
                 border-radius: 10px;
             }
@@ -47,9 +47,8 @@
 
     /* SECCION BANNER TEXT */
 .section1 {
-    background-color: rgb(20, 7, 7);
-    width: 100%;
-    height:400px;
+    background-color: map-get( $palette , "color-b" );
+    @include size ( 100% , 400px );
     margin-top: 40px;
     margin-bottom: 60px;
     position: relative;
@@ -59,8 +58,8 @@
             position: absolute;
             top: (60px * 2);
             font-weight: 800;
-            font-size: $sizestandar;
-            color: $color1;
+            font-size: 20px;
+            color: map-get( $palette , "color-w" );
             margin: 0px 20px;
             text-align: center;
         }
@@ -69,10 +68,10 @@
             .button2 {
                 position: absolute;
                 top: (140px * 2);
-                background: $color3;
+                background: map-get( $palette , "color-2" );
                 padding: 10px 10px;
                 font-weight: bold;
-                color: $color1;
+                color: map-get( $palette , "color-w" );
                 border-radius: 10px;
             }
         }

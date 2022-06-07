@@ -1,17 +1,4 @@
-//EXTEND
-%space {
-    margin: 30px 10px;
-    text-align: center;
-}
-
-%size {
-    width: 250px;
-    height: 350px;
-    margin-left: 30px;
-    border-radius: 30px;
-}
-
-    /* NOSOTROS HTML*/
+/* NOSOTROS HTML*/
 .nosotros {
     .nosotros-text {
         @extend %space;
@@ -34,13 +21,13 @@
             font-weight: 600;
             h2 {
                 margin-bottom: 30px;
-                margin-top: $sizestandar;
+                margin-top: 20px;
             }
         }
         div {
             img {
-                margin-top: $sizestandar2;
-                margin-right: $sizestandar2;
+                margin-top: 40px;
+                margin-right: 40px;
             }
         }
     }

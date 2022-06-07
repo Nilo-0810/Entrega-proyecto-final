@@ -12,7 +12,7 @@
     }
     h2 {
         font-size: 25px;
-        color: $color1;
+        color: map-get( $palette , "color-w" );
         position: absolute;
         top: 50%;
         left: 50%;
@@ -25,20 +25,12 @@
     .portada-anillo {
         height: 300px;
         h2 {
-            font-size: $sizestandar2;
+            font-size: 40px;
         }
     }
 }
 
-/* ANILLO HMTL FLEX-PRODUCTOS */
-    /* MIXIN */
-@mixin flex-anillo($dir, $wrap, $just-cont, $alig-items) {
-    display: flex;
-    flex-flow: $dir $wrap;
-    justify-content: $just-cont;
-    align-items: $alig-items;
-}
-
+//Mixin
 .anillo-flex {
     div {
         @include flex-anillo(column, wrap, center, center);

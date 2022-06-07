@@ -1,8 +1,8 @@
 /*FOOTER*/
 footer {
     width: 100%;
-    background-color: rgb(178, 6, 0);
-    color: #000;
+    background-color: map-get( $palette , "color-2" );
+    color: map-get( $palette , "color-b" );
     margin-top: 40px;
     .group1 {
         text-align: center;
@@ -24,13 +24,12 @@ footer {
             }
             .social-net {
                 a {
-                    color: $color2;
-                    width: 45px;
-                    height: 45px;
+                    color: map-get( $palette , "color-b" );
+                    @include size ( 45px , 45px );
                     line-height: 45px;
                     transition: all 300ms ease;
                     &:hover {
-                        color: $color1;
+                        color: map-get( $palette , "color-w" );
                     }
                 }
             }

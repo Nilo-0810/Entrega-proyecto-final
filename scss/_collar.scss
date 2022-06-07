@@ -12,7 +12,7 @@
     }
     h2 {
         font-size: 25px;
-        color: $color1;
+        color: map-get( $palette , "color-w" );
         position: absolute;
         top: 50%;
         left: 50%;
@@ -25,7 +25,7 @@
     .portada-collar {
         height: 300px;
         h2 {
-            font-size: $sizestandar2;
+            font-size: 40px;
         }
     }
 }
