@@ -1,6 +1,6 @@
 /* ANILLO HMTL FLEX-PRODUCTOS */
 /* MIXIN */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Oleo+Script+Swash+Caps:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap");
 .nosotros .nosotros-text {
   margin: 30px 10px;
   text-align: center; }
@@ -9,7 +9,8 @@
   width: 250px;
   height: 350px;
   margin-left: 30px;
-  border-radius: 30px; }
+  border-radius: 30px;
+  margin-top: 50px; }
 
 * {
   box-sizing: border-box;
@@ -20,7 +21,7 @@
 
 /* GOOGLE FONTS */
 body {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "IM Fell Double Pica SC", serif; }
 
 h2 {
   animation: tada;
@@ -150,89 +151,56 @@ header {
 
 /* INDEX HTML */
 /* CARDS */
-.contenedor {
-  display: inline-block;
-  text-align: center;
-  margin: 80px 30px; }
-  .contenedor section {
-    position: relative;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 4px solid #df2323;
-    border-radius: 10px; }
-    .contenedor section img {
-      width: 250px;
-      height: 250px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px; }
-    .contenedor section a h3 {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #df2323;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 10px; }
-
-/* RESPONSIVE CARDS */
-@media screen and (min-width: 740px) {
-  .contenedor {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly; }
-    .contenedor section {
-      margin-right: 30px; } }
-
-/* SECCION BANNER TEXT */
-.section1 {
-  background-color: #000;
+.container {
   width: 100%;
-  height: 400px;
-  margin-top: 40px;
-  margin-bottom: 60px;
-  position: relative; }
-  .section1 div {
-    position: relative; }
-    .section1 div p {
-      position: absolute;
-      top: 120px;
-      font-weight: 800;
-      font-size: 20px;
-      color: #fff;
-      margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px; }
+  .container .card {
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all .4s ease; }
+    .container .card:hover {
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+      transform: translate(-3%); }
+    .container .card figure img {
+      width: 100%;
+      height: 100%; }
+    .container .card .contenido {
       text-align: center; }
-    .section1 div div {
-      text-align: center; }
-      .section1 div div .button2 {
-        position: absolute;
-        top: 280px;
-        background: #df2323;
-        padding: 10px 10px;
-        font-weight: bold;
+      .container .card .contenido .button2 {
+        padding: 10px;
         color: #fff;
-        border-radius: 10px; }
+        background: #bc0303;
+        border-radius: 6px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); }
+        .container .card .contenido .button2:hover {
+          background: #df2323; }
 
-/* RESPONSIVE BANNER TEXT */
-@media screen and (min-width: 610px) {
-  .section1 div p {
-    font-size: 30px;
-    margin: 0px 35px; }
-  .section1 div div .button2 {
-    font-size: 20px; } }
+/* CARDS RESPONSIVE */
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between; }
+    .container .card {
+      height: 370px; } }
 
 /* NOSOTROS HTML*/
 .nosotros .nosotros-text h2 {
-  font-weight: 800; }
+  font-weight: bold; }
 
 /*RESPONSIVE NOSOTROS HTML*/
 @media screen and (min-width: 610px) {
   .nosotros {
     display: flex; }
     .nosotros .nosotros-text {
-      font-weight: 600; }
+      font-weight: bold; }
       .nosotros .nosotros-text h2 {
         margin-bottom: 30px;
         margin-top: 20px; }
